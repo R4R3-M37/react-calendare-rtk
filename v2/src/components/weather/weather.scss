@@ -1,0 +1,85 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: var(--font-body);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #E7E9F0;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+.card-weather {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  padding: 10px 20px;
+
+  &__info {
+
+    &__place {
+      font-size: 14px;
+      color: var(--primary-light);
+    }
+
+    &__time {
+
+      font-size: 30px;
+      color: var(--primary);
+    }
+
+
+    &__date {
+      font-size: 14px;
+      color: var(--primary-light);
+    }
+  }
+
+  &__weather {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &__temp {
+      font-size: 30px;
+    }
+
+    &__icon {
+      animation: move 1s infinite alternate ease-in-out;
+    }
+  }
+}
+
+@keyframes move {
+  to {
+    transform: translateY(-10px);
+  }
+}
