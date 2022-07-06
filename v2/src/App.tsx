@@ -100,7 +100,7 @@ const App: React.FC = () => {
 					<Content day={getData.firstDayInWeek[0]} />
 					{getData.daysInMonth.map((day: number) => (
 						<span
-							className={D.getDate() == day && getData.monthNow == D.getMonth() ? 'active' : ''}
+							className={D.getDate() == day && getData.monthNow == D.getMonth() && getData.yearNow == D.getFullYear() ? 'active' : ''}
 							key={day}>
 							{day}
 						</span>
